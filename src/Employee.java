@@ -1,10 +1,10 @@
 public class Employee {
     //TODO: create employee class variables
-    private String name;
-    private String job;
-    private int age;
-    private double wagePerHour;
-    private boolean clockedIn;
+    protected String name;
+    protected String job;
+    protected int age;
+    protected double wagePerHour;
+    protected boolean clockedIn;
 
     //TODO: create constructors
     public Employee(String name, String job, int age, double wagePerHour, boolean clockedIn){
