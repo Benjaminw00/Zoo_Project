@@ -29,7 +29,7 @@ public class Animal {
     //if you wanted to research an animal, what would you want to be able to look up?
     public String toString()
     {
-        return "This " + species + "'s name is " + name + ". It is " + age + " years old.";
+        return "This " + species + "'s name is " + name + ". It is " + age + " years old. It was born on " + birthday + ".";
     }
 
 

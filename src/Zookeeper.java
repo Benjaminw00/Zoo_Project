@@ -5,23 +5,15 @@ public class Zookeeper extends Employee{
 
     //constructors
     public Zookeeper(String name, int age, boolean clockedIn, boolean cleaningHabitat, boolean feedingAnimal){
-        this.name = name;
-        this.age = age;
-        this.clockedIn = clockedIn;
+        super(name, "Zookeeper", age, 21.5, clockedIn);
         this.cleaningHabitat = cleaningHabitat;
         this.feedingAnimal = feedingAnimal;
-        this.wagePerHour = 21.5;
-        this.job = "Zookeeper";
     }
 
     public Zookeeper(boolean cleaningHabitat, boolean feedingAnimal){
+        super("Zach", "Zookeeper", 26, 21.5, false);
         this.feedingAnimal = feedingAnimal;
         this.cleaningHabitat = cleaningHabitat;
-        this.name = "Zach";
-        this.age = 26;
-        this.clockedIn = false;
-        this.wagePerHour = 21.5;
-        this.job = "Zookeeper";
     }
 
 
@@ -52,6 +44,10 @@ public class Zookeeper extends Employee{
         return this.feedingAnimal = !feedingAnimal;
     }
 
+    //introduction method
+    public void introduction(){
+        System.out.println("Hi, my name is " + name + " and I work as a zookeeper here." + " I'm " + age + " years old. Nice to meet you!");
+    }
 
     //testing
     public static void main(String[] args){
@@ -60,10 +56,6 @@ public class Zookeeper extends Employee{
         mike.isCleaningHabitat();
         mike.changeCleaningStatus();
         mike.isCleaningHabitat();
+        mike.introduction();
     }
-
-
-
-
-
 }

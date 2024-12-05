@@ -1,7 +1,5 @@
 import java.util.LinkedList;
-
 public class Zoo {
-
 
     public static void main(String[] args) {
        LinkedList employeeNameList = new LinkedList();
@@ -16,9 +14,7 @@ public class Zoo {
        employeeNameList.add(employee3.getName() + ": " + employee3.getJob());
 
 
-       employeeClockedIn.add();
-       employeeClockedIn.add();
-       employeeClockedIn.add();
+
 
        System.out.println(employee3);
        System.out.print(employeeNameList);
