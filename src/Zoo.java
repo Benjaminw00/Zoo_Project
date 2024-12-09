@@ -1,31 +1,44 @@
 import java.util.LinkedList;
 public class Zoo {
 
-   LinkedList<Animal> animals = new LinkedList<Animal>();
-   LinkedList<Employee> empList = new LinkedList<Employee>();
+   static LinkedList<Animal> animals = new LinkedList<Animal>();
+   static LinkedList<Employee> empList = new LinkedList<Employee>();
 
-   public void addAnimal(Animal newAnimal){
+   public static void addAnimal(Animal newAnimal){
       animals.add(newAnimal);
    }
 
-    public static void main(String[] args) {
-       LinkedList employeeNameList = new LinkedList();
-       LinkedList employeeClockedIn = new LinkedList();
+   public static void addEmployee(Employee newEmployee){
+      empList.add(newEmployee);
+   }
 
+   public static void fireEmployee(Employee employee){
+      empList.remove(employee);
+   }
+
+   public static void releaseAnimal(Animal animal){
+      animals.remove(animal);
+   }
+
+   /* have to make method to print the list out
+   public static void animalList(){
+      animals.toString();
+   }
+   */
+
+    public static void main(String[] args) {
 
        Employee employee1 = new Employee("Ben", "Manager", 20, 30.50, true);
        Employee employee2 = new Employee();
        Zookeeper employee3 = new Zookeeper(true, false);
        Hippo motto = new Hippo("Motto", true, 123.23, 15, "11/23/09", 32);
 
+       addAnimal(motto);
+       addEmployee(employee1);
+       addEmployee(employee2);
+       addEmployee(employee3);
 
 
-
-
-       System.out.println(employee3);
-       System.out.println(employeeNameList);
-       System.out.println(motto);
-       motto.makeNoise();
 
 
 
