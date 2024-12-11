@@ -20,11 +20,6 @@ public class Zoo {
       animals.remove(animal);
    }
 
-   /* have to make method to print the list out
-   public static void animalList(){
-      animals.toString();
-   }
-   */
 
     public static void main(String[] args) {
 

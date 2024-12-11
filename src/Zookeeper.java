@@ -1,19 +1,23 @@
 public class Zookeeper extends Employee{
 
-    boolean cleaningHabitat;
-    boolean feedingAnimal;
+    private boolean cleaningHabitat;
+    private boolean feedingAnimal;
+    private static int zookeeperAmt = 0;
+
 
     //constructors
     public Zookeeper(String name, int age, boolean clockedIn, boolean cleaningHabitat, boolean feedingAnimal){
         super(name, "Zookeeper", age, 21.5, clockedIn);
         this.cleaningHabitat = cleaningHabitat;
         this.feedingAnimal = feedingAnimal;
+        zookeeperAmt++;
     }
 
     public Zookeeper(boolean cleaningHabitat, boolean feedingAnimal){
         super("Zach", "Zookeeper", 26, 21.5, false);
         this.feedingAnimal = feedingAnimal;
         this.cleaningHabitat = cleaningHabitat;
+        zookeeperAmt++;
     }
 
 
@@ -44,6 +48,9 @@ public class Zookeeper extends Employee{
         return this.feedingAnimal = !feedingAnimal;
     }
 
+    public static void zookeeperAmt() {
+        System.out.println("We have " + zookeeperAmt + " zookeepers at our zoo.");
+    }
     //introduction method
     public void introduction(){
         System.out.println("Hi, my name is " + name + " and I work as a zookeeper here." + " I'm " + age + " years old. Nice to meet you!");
@@ -57,5 +64,7 @@ public class Zookeeper extends Employee{
         mike.changeCleaningStatus();
         mike.isCleaningHabitat();
         mike.introduction();
+        zookeeperAmt();
+        employeeAmt();
     }
 }

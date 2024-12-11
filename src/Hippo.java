@@ -2,11 +2,13 @@ public class Hippo extends Animal{
     //Special hippo attribute
     //(how far they can open up their big jaws to eat those big watermelons and stuff)
     private double jawExtensionLength;
+    private static int hippoAmt=0;
 
     //constructors
     public Hippo(String name, boolean hungry, double weight, int age, String birthday, double jawExtensionLength ){
         super("Hippo", name, hungry, weight, age, birthday);
         this.jawExtensionLength= jawExtensionLength;
+        hippoAmt++;
 
     }
     public Hippo(){
@@ -17,7 +19,9 @@ public class Hippo extends Animal{
     public void makeNoise(){
         System.out.println(name + ": muuaaaaarrrhhh");
     }
-
+    public static void hippoAmt(){
+        System.out.println("There are " + hippoAmt + " hippos in our zoo.");
+    }
     //toString()
     public String toString()
     {
@@ -29,5 +33,7 @@ public class Hippo extends Animal{
         Animal motto = new Hippo("Motto", true, 349.4, 20, "5/1/2004", 30.5);
         System.out.println(motto);
         motto.makeNoise();
+        hippoAmt();
+        animalAmt();
     }
 }

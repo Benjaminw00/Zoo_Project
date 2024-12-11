@@ -5,6 +5,7 @@ public class Employee {
     protected int age;
     protected double wagePerHour;
     protected boolean clockedIn;
+    protected static int employeeCount=0;
 
     //TODO: create constructors
     public Employee(String name, String job, int age, double wagePerHour, boolean clockedIn){
@@ -13,6 +14,7 @@ public class Employee {
         this.age = age;
         this.wagePerHour = wagePerHour;
         this.clockedIn = clockedIn;
+        employeeCount++;
     }
 
     public Employee(){
@@ -21,6 +23,7 @@ public class Employee {
         this.age = 42;
         this.wagePerHour = 70.50;
         this.clockedIn = true;
+        employeeCount++;
     }
     //TODO: create getters and setters
 
@@ -56,6 +59,10 @@ public class Employee {
         return name + " is working as our " + job + ". They are currently " + age +" years old. They make $" + wagePerHour + " per hour.";
 
 
+    }
+
+    public static void employeeAmt(){
+        System.out.println("We have " + employeeCount + " employees at our zoo.");
     }
     //TODO: create main method test
     public static void main(String[] args){

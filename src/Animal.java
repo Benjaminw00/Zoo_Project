@@ -6,6 +6,7 @@ public class Animal {
     protected double weight;
     protected int age;
     protected String birthday;
+    protected static int animalAmt = 0;
 
     public Animal(String species, String name, boolean hungry, double weight, int age, String birthday){
         this.species = species;
@@ -14,6 +15,7 @@ public class Animal {
         this.weight = weight;
         this.age = age;
         this.birthday = birthday;
+        animalAmt++;
     }
 
     public Animal(){ //class question: how can I be as lazy as possible right now
@@ -23,6 +25,7 @@ public class Animal {
         this.weight = 360.77;
         this.age = 12;
         this.birthday = "11/11/11"; //because it is a string, can be formatted in any way
+        animalAmt++;
     }
 
 
@@ -32,7 +35,9 @@ public class Animal {
         return "This " + species + "'s name is " + name + ". It is " + age + " years old. It was born on " + birthday + ".";
     }
 
-
+    public static void animalAmt(){
+        System.out.println("There are " + animalAmt + " animals in our zoo.");
+    }
     public String getName() {
         return name;
     }
@@ -94,7 +99,7 @@ public class Animal {
         geoff.setHungry(false);
         geoff.makeNoise();
         System.out.println(wolf);
-
+        animalAmt();
 
     }
 }
