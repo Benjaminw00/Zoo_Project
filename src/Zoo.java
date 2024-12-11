@@ -32,6 +32,10 @@ public class Zoo {
        addEmployee(employee1);
        addEmployee(employee2);
        addEmployee(employee3);
+       Animal.animalAmt();
+       Hippo.hippoAmt();
+       Employee.employeeAmt();
+       Zookeeper.zookeeperAmt();
 
 
 

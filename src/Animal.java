@@ -6,7 +6,7 @@ public class Animal {
     protected double weight;
     protected int age;
     protected String birthday;
-    protected static int animalAmt = 0;
+    private static int animalAmt = 0;
 
     public Animal(String species, String name, boolean hungry, double weight, int age, String birthday){
         this.species = species;

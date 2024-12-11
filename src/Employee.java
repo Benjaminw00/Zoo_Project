@@ -5,7 +5,7 @@ public class Employee {
     protected int age;
     protected double wagePerHour;
     protected boolean clockedIn;
-    protected static int employeeCount=0;
+    private static int employeeCount=0;
 
     //TODO: create constructors
     public Employee(String name, String job, int age, double wagePerHour, boolean clockedIn){
